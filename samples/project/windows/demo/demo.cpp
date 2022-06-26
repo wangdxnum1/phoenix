@@ -8,7 +8,7 @@
 #include "extension/timer/timer.h"
 #include "extension/strings/string_util.h"
 #include "extension/at_exit_manager.h"
-#include "log/demo_log.h"
+//#include "log/demo_log.h"
 #define MAX_LOADSTRING 100
 std::unique_ptr<NS_EXTENSION::FrameworkThread > g_main_thread = nullptr;
 std::unique_ptr<NS_EXTENSION::RepeatingTimer> g_clock = nullptr; 
@@ -43,8 +43,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 	NS_EXTENSION::AtExitManager at_exit = NS_EXTENSION::AtExitManagerAdeptor::GetAtExitManager();
 	g_main_thread.reset(NS_EXTENSION::ThreadManager::CreateFrameworkThread(0,"main"));
-	DemoLogger::GetInstance()->GetLogger()->SetLogFile("d:/testlog/test.log");
-	DemoLogger::GetInstance()->GetLogger()->SetLogLevel(NS_NIMLOG::LOG_LEVEL::LV_PRO);
+	//DemoLogger::GetInstance()->GetLogger()->SetLogFile("d:/testlog/test.log");
+	//DemoLogger::GetInstance()->GetLogger()->SetLogLevel(NS_NIMLOG::LOG_LEVEL::LV_PRO);
 	g_main_thread->RegisterInitCallback([hInstance, nCmdShow]() {
 		// 初始化全局字符串
 		LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -71,7 +71,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	g_global_timer_thread.reset();
 	g_main_thread.release();
 	at_exit.reset();
-	DEMO_LOG_PRO("end");
+	//DEMO_LOG_PRO("end");
     return (int) 0;
 }
 

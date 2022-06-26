@@ -11,7 +11,7 @@ int main()
 {
 	NS_EXTENSION::AtExitManager at_exit;	
 	LogTest log_test;
-	TestLogger::GetInstance()->GetLogger()->SetLogFile("d:/testlog/test.log");
+	TestLogger::GetInstance()->GetLogger()->SetLogFile("test.log");
 	TestLogger::GetInstance()->GetLogger()->SetLogLevel(LOG_LEVEL::LV_PRO);	
 	NS_NET::NetworkInterfaceList network_i_list;
 	GetNetworkList(&network_i_list, 0);

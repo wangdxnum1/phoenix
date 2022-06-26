@@ -20,10 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4A56A31F-A9C9-42E1-AA8E-2A264A5E454D}</ProjectGuid>
+    <ProjectGuid>{86DF1410-AADE-4192-8674-5D26F881706F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>demo</RootNamespace>
+    <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <ProjectName>nim_log_test</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,100 +93,89 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;BUILDING_LIBCURL;HTTP_IMPLEMENTATION;BASE_IMPLEMENTATION;NET_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BUILDING_LIBCURL;HTTP_IMPLEMENTATION;BASE_IMPLEMENTATION;NET_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/comm/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/network/;$(ProjectDir)../../../../phoenix/network/google_net/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <AdditionalDependencies>WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Crypt32.lib;WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;Iphlpapi.lib;Userenv.lib;tinySAK.lib;tinyNET.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)../../../../third_party/doubanguo/tinyNET/prebuild/windows/x86/;$(ProjectDir)../../../../third_party/doubanguo/tinySAK/prebuild/windows/x86/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BUILDING_LIBCURL;HTTP_IMPLEMENTATION;BASE_IMPLEMENTATION;NET_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/comm/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/network/;$(ProjectDir)../../../../phoenix/network/google_net/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Crypt32.lib;WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;Iphlpapi.lib;Userenv.lib;tinySAK.lib;tinyNET.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)../../../../third_party/doubanguo/tinyNET/prebuild/windows/x64/;$(ProjectDir)../../../../third_party/doubanguo/tinySAK/prebuild/windows/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BUILDING_LIBCURL;HTTP_IMPLEMENTATION;BASE_IMPLEMENTATION;NET_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/comm/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/network/;$(ProjectDir)../../../../phoenix/network/google_net/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Crypt32.lib;WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;Iphlpapi.lib;Userenv.lib;tinySAK.lib;tinyNET.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)../../../../third_party/doubanguo/tinyNET/prebuild/windows/x86/;$(ProjectDir)../../../../third_party/doubanguo/tinySAK/prebuild/windows/x86/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BUILDING_LIBCURL;HTTP_IMPLEMENTATION;BASE_IMPLEMENTATION;NET_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/comm/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/network/;$(ProjectDir)../../../../phoenix/network/google_net/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Crypt32.lib;WS2_32.lib;dbghelp.lib;version.lib;Psapi.lib;Iphlpapi.lib;Userenv.lib;tinySAK.lib;tinyNET.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)../../../../third_party/doubanguo/tinyNET/prebuild/windows/x64/;$(ProjectDir)../../../../third_party/doubanguo/tinySAK/prebuild/windows/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="demo.h" />
-    <ClInclude Include="log\demo_log.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="demo.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="demo.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="demo.ico" />
-    <Image Include="small.ico" />
+    <ClInclude Include="testlog.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\project\windows\base\extension\extension.vcxproj">
@@ -194,8 +184,14 @@
     <ProjectReference Include="..\..\..\..\project\windows\base\google_base\google_base.vcxproj">
       <Project>{eb38c219-a17c-45ec-b2d5-0186716dbeb0}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\project\windows\comm\nim_http\nim_http.vcxproj">
+      <Project>{631b0b69-ddce-4db1-9681-6a67d89999d6}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\project\windows\comm\nim_log\nim_log.vcxproj">
       <Project>{39eaa991-100a-4a11-953c-be265273da42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\project\windows\network\google_net\google_net.vcxproj">
+      <Project>{4da564d0-6dc8-42c7-a078-7a9eff695d57}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

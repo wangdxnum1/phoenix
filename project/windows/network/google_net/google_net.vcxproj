@@ -195,7 +195,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NET_IMPLEMENTATION;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;WIN32_LEAN_AND_MEAN;TINYSAK_IMPORTS_IGNORE;TINYNET_IMPORTS_IGNORE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NET_IMPLEMENTATION;WIN32_LEAN_AND_MEAN;TINYSAK_IMPORTS_IGNORE;TINYNET_IMPORTS_IGNORE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/network/;$(ProjectDir)../../../../phoenix/network/google_net/;$(ProjectDir)../../../../third_party/;$(ProjectDir)../../../../third_party/googletest/src/googletest/include/;$(ProjectDir)../../../../third_party/openssl/include/windows/;$(ProjectDir)../../../../third_party/doubanguo/tinyNET/include/;$(ProjectDir)../../../../third_party/doubanguo/tinySAK/include/</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>

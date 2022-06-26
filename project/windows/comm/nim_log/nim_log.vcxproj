@@ -135,7 +135,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NIMLOG_IMPLEMENTATION</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NIMLOG_IMPLEMENTATION</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:threadSafeInit- /utf-8 %(AdditionalOptions)</AdditionalOptions>
@@ -173,7 +173,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NIMLOG_IMPLEMENTATION</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;NIMLOG_IMPLEMENTATION</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)../../../../;$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../phoenix/comm/</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:threadSafeInit- /utf-8 %(AdditionalOptions)</AdditionalOptions>

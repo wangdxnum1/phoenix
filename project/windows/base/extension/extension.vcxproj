@@ -154,7 +154,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;WITH_ENCRYPT;COMPONENT_BUILD;BASE_IMPLEMENTATION;EXTENSION_IMPLEMENTATION;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/;$(ProjectDir)../../../../third_party/;$(ProjectDir)../../../../third_party/googletest/src/googletest/include/;$(ProjectDir)../../../../third_party/win_dev_id/include/</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>
       <LanguageStandard>stdcpp17</LanguageStandard>
