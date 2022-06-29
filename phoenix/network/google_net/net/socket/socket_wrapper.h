@@ -7,6 +7,7 @@
 #include "tnet_transport.h"
 #include "net/socket/socket_handler.h"
 #include <memory.h>
+#include <memory>
 
 NET_BEGIN_DECLS
 

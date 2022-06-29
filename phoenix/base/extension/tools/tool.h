@@ -10,6 +10,7 @@
 #include "extension/version.h"
 #include <string>
 #include <vector>
+#include <memory>
 
 EXTENSION_BEGIN_DECLS
 

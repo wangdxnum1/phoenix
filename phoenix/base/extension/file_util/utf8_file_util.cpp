@@ -162,7 +162,8 @@ bool FilePathApartFileName(const UTF8String &filepath_in,
 #if defined(OS_WIN)
 bool FilePathApartFileName(const UTF16String &filepath_in, UTF16String &filename_out)
 {
-	if (UTF8String out;FilePathApartFileName(NS_EXTENSION::UTF16ToUTF8(filepath_in), out))
+	UTF8String out;
+	if (FilePathApartFileName(NS_EXTENSION::UTF16ToUTF8(filepath_in), out))
 	{
 		filename_out = NS_EXTENSION::UTF8ToUTF16(out);
 		return true;

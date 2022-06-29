@@ -281,7 +281,8 @@ int NimNetUtil::SystemHostResolverCall(const std::string& host,
  int NimNetUtil::GetIPByName(const std::string& host, std::string& ip, net::HostResolverFlags host_resolver_flags/* = net::HOST_RESOLVER_SYSTEM_ONLY*/, net::AddressFamily addr_family/* = ADDRESS_FAMILY_UNSPECIFIED*/)
 {	
 	 std::list<std::string> ip_list;
-	 if (int ret = GetIPByName(host, ip_list, host_resolver_flags, addr_family); ret == OK)
+	 int ret = GetIPByName(host, ip_list, host_resolver_flags, addr_family);
+	 if (ret == OK)
 	 {
 		 ip = *ip_list.begin();
 		 return ret;

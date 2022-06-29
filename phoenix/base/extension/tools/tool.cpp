@@ -197,7 +197,8 @@ void ClearFile(const UTF8String& path, int64_t file_length_limit)
 		{
 			if (ret >= file_length_limit)
 			{
-				if (std::ofstream os(path);os.is_open())
+				std::ofstream os(path);
+				if (os.is_open())
 				{
 					os.clear();
 					os.close();

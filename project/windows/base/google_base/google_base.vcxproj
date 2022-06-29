@@ -23,7 +23,7 @@
     <ProjectGuid>{EB38C219-A17C-45EC-B2D5-0186716DBEB0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>base</RootNamespace>
-    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>google_base</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -43,7 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -131,15 +131,16 @@
       <WarningLevel>Level1</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;BASE_IMPLEMENTATION;_WINDOWS;_CRT_SECURE_NO_WARNINGS;DEBUG;_HAS_NODISCARD;_HAS_EXCEPTIONS=0;COMPONENT_BUILD;__STD_C;_CRT_RAND_S;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_ATL_NO_OPENGL;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=1;_SECURE_ATL;WIN32_LEAN_AND_MEAN;NOMINMAX;_UNICODE;UNICODE;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;DBGHELP_TRANSLATE_TCHAR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_SECURE_ATL;_ATL_NO_OPENGL;_HAS_NODISCARD;_HAS_EXCEPTIONS=0;_UNICODE;__STD_C;_CRT_RAND_S;DEBUG;UNICODE;NOMINMAX;DBGHELP_TRANSLATE_TCHAR;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;PSAPI_VERSION=2;WIN32_LEAN_AND_MEAN;BASE_IMPLEMENTATION;COMPONENT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)../../../../phoenix/;$(ProjectDir)../../../../phoenix/build/;$(ProjectDir)../../../../phoenix/base/;$(ProjectDir)../../../../phoenix/base/google_base/</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/Zc:strictStrings- /Zc:inline /Zc:threadSafeInit- /utf-8 %(AdditionalOptions)</AdditionalOptions>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
       <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
