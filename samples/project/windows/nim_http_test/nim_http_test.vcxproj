@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FC6DA6CD-A3B4-4CEB-B405-1C9E587E214C}</ProjectGuid>
+    <ProjectGuid>{DA3441DE-E230-4E85-9730-DB3D3D092112}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>nimhttptest</RootNamespace>
     <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>

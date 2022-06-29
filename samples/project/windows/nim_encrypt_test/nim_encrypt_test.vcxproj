@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{3C730827-28C3-4A65-B4D2-3466EF3F6DBF}</ProjectGuid>
+    <ProjectGuid>{01AFA921-F4C5-4C13-96BD-3B44A08D55E0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>nimencrypttest</RootNamespace>
     <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
