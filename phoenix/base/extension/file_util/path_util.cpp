@@ -162,4 +162,35 @@ std::string GetAppInstallDir()
 	return g_data_local_conf.app_install_dir_;
 }
 
+
+// add by wangzf
+std::wstring GetCurrentModuleDirectory2()
+{
+	base::FilePath result;
+	if (!base::PathService::Get(DIR_MODULE, &result)) {
+		return L"";
+	}
+
+	return result.value();
+}
+
+std::wstring GetCurrentWorkDirectory() {
+	base::FilePath path;
+	NS_BASE::GetCurrentDirectory(&path);
+
+	return path.value();
+}
+
+bool SetCurrentWorkDirctory(const std::wstring& dir) {
+	base::FilePath path(dir);
+	return NS_BASE::SetCurrentDirectory(path);
+}
+
+std::wstring PathAppendComponent(const std::wstring& dir, const std::wstring &comp) {
+	base::FilePath path(dir);
+	path = path.Append(comp);
+
+	return path.value();
+}
+
 EXTENSION_END_DECLS

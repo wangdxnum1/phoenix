@@ -28,6 +28,14 @@ EXTENSION_EXPORT std::string GetLocalAppDataDir();
 EXTENSION_EXPORT void SetAppInstallDir(const std::string path);
 EXTENSION_EXPORT std::string GetAppInstallDir();
 
+// add by wangzf
+EXTENSION_EXPORT std::wstring GetCurrentModuleDirectory2();
+
+EXTENSION_EXPORT std::wstring GetCurrentWorkDirectory();
+EXTENSION_EXPORT bool SetCurrentWorkDirctory(const std::wstring& path);
+
+EXTENSION_EXPORT std::wstring PathAppendComponent(const std::wstring& path, const std::wstring &comp);
+
 EXTENSION_END_DECLS
 
 #endif // __EXTENSION_PATH_UTIL_H__
