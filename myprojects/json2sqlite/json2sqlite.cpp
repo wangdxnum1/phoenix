@@ -2,11 +2,11 @@
 //
 
 #include "stdafx.h"
-#include "main_application.h"
+#include "app/main_application.h"
 
 int main(int argc, char* argv[])
 {
-	json2sqlite::MainApplication app;
+	json2sqlite::MainApplication app("main");
 	app.Run(argc, argv);
 
     return 0;

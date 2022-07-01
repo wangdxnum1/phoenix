@@ -12,6 +12,9 @@
     <Filter Include="app">
       <UniqueIdentifier>{ae117211-c0f3-410c-95f8-c81b2d9d8dd1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{9e6abeb4-bd05-43d3-b632-ffda5e583c4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -23,8 +26,11 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main_application.h">
+    <ClInclude Include="app\main_application.h">
       <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="log\mylog.h">
+      <Filter>log</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -34,8 +40,11 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>app</Filter>
     </ClCompile>
-    <ClCompile Include="main_application.cpp">
+    <ClCompile Include="app\main_application.cpp">
       <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="log\mylog.cpp">
+      <Filter>log</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
