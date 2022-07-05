@@ -10,6 +10,7 @@
 #include "base/files/file_util.h"
 #include "base/process/launch.h"
 #include "base/path_service.h"
+#include "base/guid.h"
 #include "zlib/include/zlib.h"
 #include <mutex>
 #include <fstream>
@@ -347,4 +348,11 @@ void SetErrorNo(int errorno)
 #warning "not supported on this OS"
 #endif
 }
+
+
+// add by wangzf
+std::string GenerateGUID() {
+	return base::GenerateGUID();
+}
+
 EXTENSION_END_DECLS

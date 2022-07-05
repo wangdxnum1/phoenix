@@ -67,6 +67,9 @@ EXTENSION_EXPORT UTF8String GetGZipData(UTF8String data);
 EXTENSION_EXPORT int GetErrorNo();
 EXTENSION_EXPORT void SetErrorNo(int errorno);
 
+// add by wangzf
+EXTENSION_EXPORT std::string GenerateGUID();
+
 EXTENSION_END_DECLS
 
 #endif //SHARED_TOOL_H_
