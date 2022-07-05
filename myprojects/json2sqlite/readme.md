@@ -3,13 +3,20 @@
 这个小程序的功能主要是把json数据转换成sqlite3数据库;  
 使用说明：json2sqlite.exe --json ransomware.json --database virus.db  
 这个功能不是主要的，主要想想尝试下chromium-base库在平时开发中的便利程度。
-### 2.程序模块说明
+### 2.程序依赖说明
 1.  chromium-base,是chromium项目的基本组件，一个字，爽；
 2.  extension,网易自己再次封装的chromium-base，感觉还是有必要的，如果自己要用，也要提供之间这一层；
 3.  gflags,google命令行解析；
-4.  nlohmann-json,json解析。
+4.  nlohmann-json,json解析；
+5.  sqlite3,spdlog 等等。
 
-### 3.线程模型
+### 3.程序模块说明
+1.  app,程序生命周期，包括主线程，工作线程等；
+2.  task，任务或者消息驱动，用于每个线程之前传递任务处理任务；
+3.  virus，病毒解析，病毒库生成器；
+4.  log，封装spdlog，用于输出日志；
+
+### 4.线程模型
 主要是想使用chromium-base的线程模型和消息循环机制，我开启了3个线程循环
 1.  主线程循环，类似UI框架的UI线程；
 2.  json解析线程；
