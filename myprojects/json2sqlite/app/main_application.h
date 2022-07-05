@@ -6,6 +6,8 @@
 #include "extension/thread/framework_thread.h"
 
 namespace json2sqlite {
+	class Json2SqliteTask;
+
 	class MainApplication : public std::enable_shared_from_this<MainApplication>, 
 		public NS_EXTENSION::FrameworkThread {
 	public:
@@ -17,14 +19,20 @@ namespace json2sqlite {
 		virtual void CleanUp() override;
 	private:
 		void RunOnCurrentThreadWithLoop();
-
 	private:
-		void ResetCurrentWorkDirectory();
+		void StartWorkThreads();
+		void PostJson2SqliteTask();
+		void HandleJson2SqliteTask(std::shared_ptr<Json2SqliteTask> task);
+		void SaveVirusToSqlite(std::shared_ptr<Json2SqliteTask> task);
 	public:
 		MainApplication(const std::string& name);
 		~MainApplication();
 	private:
 		DISALLOW_COPY_AND_ASSIGN(MainApplication);
+	private:
+		//std::shared_ptr<NS_EXTENSION::FrameworkThread> main_thread_;
+		std::shared_ptr<NS_EXTENSION::FrameworkThread> json_parse_thread_;
+		std::shared_ptr<NS_EXTENSION::FrameworkThread> sqlite3_thread_;
 	};
 }
 

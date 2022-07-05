@@ -15,6 +15,12 @@
     <Filter Include="log">
       <UniqueIdentifier>{9e6abeb4-bd05-43d3-b632-ffda5e583c4f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="task">
+      <UniqueIdentifier>{32fbf0a1-1f8b-4c72-b789-1ef5ef5f76de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="virus">
+      <UniqueIdentifier>{71fb9a8e-d836-440c-bbbf-7983fc780e0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -32,6 +38,18 @@
     <ClInclude Include="log\mylog.h">
       <Filter>log</Filter>
     </ClInclude>
+    <ClInclude Include="task\task.h">
+      <Filter>task</Filter>
+    </ClInclude>
+    <ClInclude Include="virus\virus.h">
+      <Filter>virus</Filter>
+    </ClInclude>
+    <ClInclude Include="virus\virus_parser.h">
+      <Filter>virus</Filter>
+    </ClInclude>
+    <ClInclude Include="virus\virus_database_generator.h">
+      <Filter>virus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="json2sqlite.cpp">
@@ -45,6 +63,18 @@
     </ClCompile>
     <ClCompile Include="log\mylog.cpp">
       <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="task\task.cpp">
+      <Filter>task</Filter>
+    </ClCompile>
+    <ClCompile Include="virus\virus.cpp">
+      <Filter>virus</Filter>
+    </ClCompile>
+    <ClCompile Include="virus\virus_parser.cpp">
+      <Filter>virus</Filter>
+    </ClCompile>
+    <ClCompile Include="virus\virus_database_generator.cpp">
+      <Filter>virus</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
