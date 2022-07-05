@@ -1,3 +1,4 @@
+*暂时只支持Windows Debug x64*
 ### 1.功能说明
 这个小程序的功能主要是把json数据转换成sqlite3数据库;  
 使用说明：json2sqlite.exe --json ransomware.json --database virus.db  
