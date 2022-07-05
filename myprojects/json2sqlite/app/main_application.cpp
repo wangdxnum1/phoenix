@@ -52,6 +52,12 @@ namespace json2sqlite {
 		return 0;
 	}
 
+	void MainApplication::Exit() {
+		StopWorkThreads();
+
+		DettachCurrentThread();
+	}
+
 	bool MainApplication::HandleCommandLine(int argc, char* argv[]) {
 		gflags::SetVersionString("1.0.0");
 		gflags::RegisterFlagValidator(&FLAGS_json, &ValidateJsonFilePath);
@@ -131,6 +137,12 @@ namespace json2sqlite {
 		});
 	}
 
+	void MainApplication::StopWorkThreads() {
+		json_parse_thread_->Stop();
+
+		sqlite3_thread_->Stop();
+	}
+
 	void MainApplication::PostJson2SqliteTask(){
 		std::shared_ptr<Json2SqliteTask> task = std::make_shared<Json2SqliteTask>();
 		task->json_path_ = FLAGS_json;
@@ -180,6 +192,8 @@ namespace json2sqlite {
 		// then post data to sqlite database thread to insert to database
 		NS_EXTENSION::ThreadManager::PostTask(THREAD_MAIN_ID, [this, ret]() {
 			LOG_INFO("save virus {}", ret ? "success" : "fail");
+
+			Exit();
 		});
 	}
 

@@ -12,6 +12,7 @@ namespace json2sqlite {
 		public NS_EXTENSION::FrameworkThread {
 	public:
 		int Run(int argc, char* argv[]);
+		void Exit();
 	private:
 		bool HandleCommandLine(int argc, char* argv[]);
 	private:
@@ -21,6 +22,7 @@ namespace json2sqlite {
 		void RunOnCurrentThreadWithLoop();
 	private:
 		void StartWorkThreads();
+		void StopWorkThreads();
 		void PostJson2SqliteTask();
 		void HandleJson2SqliteTask(std::shared_ptr<Json2SqliteTask> task);
 		void SaveVirusToSqlite(std::shared_ptr<Json2SqliteTask> task);
