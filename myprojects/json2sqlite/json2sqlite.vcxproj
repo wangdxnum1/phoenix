@@ -182,9 +182,6 @@
     <ProjectReference Include="..\..\project\windows\base\google_base\google_base.vcxproj">
       <Project>{eb38c219-a17c-45ec-b2d5-0186716dbeb0}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\project\windows\comm\nim_db\nim_db.vcxproj">
-      <Project>{14e9b566-a3af-4ee0-a53f-6e867e603d0a}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
